@@ -1,1 +1,9 @@
 <p>lista-videogiochi works!</p>
+<ul>
+    <li *ngFor="let GameItem of GameItems">
+        <span>
+             {{GameItem}} 
+        </span>
+        <button (click)="selectGameItem(GameItem.id)">></button>
+    </li>
+</ul>
