@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ListaVideogiochiComponent } from './components/lista-videogiochi/lista-videogiochi.component';
 import { DettaglioVideogiocoComponent } from './components/dettaglio-videogioco/dettaglio-videogioco.component';
 import { ModificaListaComponent } from './components/modifica-lista/modifica-lista.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ModificaListaComponent } from './components/modifica-lista/modifica-lis
     HomeComponent,
     ListaVideogiochiComponent,
     DettaglioVideogiocoComponent,
-    ModificaListaComponent
+    ModificaListaComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule
