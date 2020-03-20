@@ -1,8 +1,7 @@
-<ul>
-    <li *ngFor="let menuItem of menuItems">
-        <span>
-            {{menuItem.description}}
-        </span>
-        <button (click)="selectMenuItem(menuItem.id)">></button>
-    </li>
+
+<ul class="css_menu_wrapper">
+    <li class="box a" routerLink="/home" routerLinkActive="active">home</li>
+    <li class="box d" routerLink="/gameList" routerLinkActive="active">lista videogiochi</li>
+    <li class="box f" routerLink="/modificaLista" routerLinkActive="active">modifica lista</li>
+    <!-- <li routerLink="/sadsadsadsad" routerLinkActive="active">Path sbagliato</li> -->
 </ul>
