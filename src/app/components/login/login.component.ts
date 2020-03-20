@@ -12,8 +12,9 @@ export class LoginComponent implements OnInit {
  
   ngOnInit(): void {
   }
+
   login(nome:string,password:string) {
-    if (nome !== null && password !== null) {
+    if (nome != null && password != null && nome!=="" && password!=="") {
       this.router.navigate(['/home']);
     }
 
