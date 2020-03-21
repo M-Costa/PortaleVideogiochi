@@ -7,7 +7,7 @@ import { CanActivateChild, Router } from '@angular/router';
 export class LoginGuardServiceService implements CanActivateChild {
 
   constructor(private router:Router) { }
-  
+
   canActivateChild(){
     if(sessionStorage.getItem('user')!=null){
        return true;
@@ -17,4 +17,4 @@ export class LoginGuardServiceService implements CanActivateChild {
     }
   }
   }
-}
+
