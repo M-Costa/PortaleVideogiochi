@@ -14,8 +14,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(nome:string,password:string) {
+    
     if (nome != null && password != null && nome!=="" && password!=="") {
-      this.router.navigate(['/home']);
+      sessionStorage.setItem('user',nome);
+      this.router.navigateByUrl('/home');
     }
 
   }

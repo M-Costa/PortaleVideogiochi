@@ -11,14 +11,19 @@ import { ModificaListaComponent } from './components/modifica-lista/modifica-lis
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginGuardServiceService } from './services/login-guard-service.service';
 
 const appRoutes: Routes = [
-  {path:'',redirectTo:'/login',pathMatch:'full'},
-  {path:'login', component:LoginComponent },
+  {path: 'portale',canActivateChild:[LoginGuardServiceService], children:[
   { path: 'home', component: HomeComponent },
   { path: 'gameList',      component: ListaVideogiochiComponent },
   { path: 'modificaLista',      component: ModificaListaComponent },
   { path: 'dettaglioVideogioco',      component: DettaglioVideogiocoComponent },
+
+  ]},
+  {path:'',redirectTo:'/login',pathMatch:'full'},
+  {path:'login', component:LoginComponent },
+
 ];
 
 @NgModule({
