@@ -1,5 +1,6 @@
 import { Component, OnInit,EventEmitter,Output} from '@angular/core';
 import { MenuItem } from 'src/app/model/menu-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,8 +9,13 @@ import { MenuItem } from 'src/app/model/menu-item';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
+  }
+  logout(){
+    sessionStorage.removeItem('user');
+    this.router.navigateByUrl('/login');
+
   }
 }

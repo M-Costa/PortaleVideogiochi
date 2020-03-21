@@ -1,6 +1,6 @@
 .wrapper {
         display: grid;
-        grid-template-columns: 1/2fr 1/2fr 1fr;
+        grid-template-columns: 1/2fr 1/2fr 1fr 1/4fr;
         background-color: #fff;
         color: #444;
         gap: 1rem;
@@ -39,4 +39,11 @@
           }
           li{
               list-style: none;
+          }
+          .logout{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
           }

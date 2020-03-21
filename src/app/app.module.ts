@@ -12,6 +12,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginGuardServiceService } from './services/login-guard-service.service';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { MenuServiceService } from './services/menu-service.service';
 
 const appRoutes: Routes = [
   {path: 'portale',canActivateChild:[LoginGuardServiceService], children:[
@@ -22,7 +24,9 @@ const appRoutes: Routes = [
 
   ]},
   {path:'',redirectTo:'/login',pathMatch:'full'},
-  {path:'login', component:LoginComponent },
+  {path:'login', component:LoginComponent, canActivate:[LoginGuardServiceService] },
+  {path:'menu', component:MenuComponent, canActivate:[MenuServiceService]},
+  {path:'**', component:ErrorPageComponent}
 
 ];
 
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
     ModificaListaComponent,
     MenuComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule, 

@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     
     if (nome != null && password != null && nome!=="" && password!=="") {
       sessionStorage.setItem('user',nome);
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/portale/home');
     }
 
   }
