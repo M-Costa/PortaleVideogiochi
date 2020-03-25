@@ -1,0 +1,28 @@
+#titolo{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(255, 5, 5, 0.644);
+    padding:2rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
+    font-size: 3rem;
+    color: white;
+    border-radius:10px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1/2fr 1/2fr 1fr 1/4fr;
+    background-color: #fff;
+    color: #444;
+    border-radius:10px;
+
+
+  } 
+  .box {
+    background-color: rgba(255, 5, 5, 0.644);
+    color: #fff;
+    padding: 1rem;
+    font-size: 150%;
+    text-align: center;
+    margin: none;
+    
+  }

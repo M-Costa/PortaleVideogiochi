@@ -1,0 +1,51 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: #fff;
+    color: #444;
+    gap: 0rem;
+  } 
+.box {
+    background-color: rgba(255, 5, 5, 0.644);
+    color: #fff;
+    border-radius:10px;
+    padding: 10px;
+    font-size: 150%;
+    float: left;
+    text-align: center;
+   
+    
+  }
+  .user-grid {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.pw-grid {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.invio-grid {
+    grid-column-start:4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.invio-grid:hover{
+    background-color: rgb(255, 0, 0);
+}
+.page{
+    padding: 10rem 10rem 10rem 10rem;
+    
+}
+p{
+    text-align: center;
+}
+#reg:hover{
+    color: rgba(255, 5, 5, 0.644);
+    
+}
