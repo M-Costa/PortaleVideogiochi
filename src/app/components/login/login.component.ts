@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(nome:string,password:string) {
-    
+   
     if (nome != null && password != null && nome!=="" && password!=="") {
       sessionStorage.setItem('user',nome);
       this.router.navigateByUrl('/portale/home');

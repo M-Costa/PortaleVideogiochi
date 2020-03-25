@@ -2,7 +2,9 @@
 <ul class="wrapper">
     <li class="box homeGrid" routerLink="/portale/home" routerLinkActive="active">home</li>
     <li class="box lista" routerLink="/portale/gameList" routerLinkActive="active">lista videogiochi</li>
+    <div *ngIf="checkAdmin()">
     <li class="box modificaGrid" routerLink="/portale/modificaLista" routerLinkActive="active">modifica lista</li>
+   </div>
     <li class="box logout" (click)="logout()">logout</li>
 
 </ul>

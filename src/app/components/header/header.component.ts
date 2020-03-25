@@ -11,5 +11,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  verificaLogin()
+  {
+    if(sessionStorage.getItem('user')===null){
+      return false;
+    }else{
+      return sessionStorage.getItem('user')!==null;
+  
+    }
+   
+  }
 
 }

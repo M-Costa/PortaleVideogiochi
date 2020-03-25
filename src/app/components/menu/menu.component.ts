@@ -18,4 +18,14 @@ export class MenuComponent implements OnInit {
     this.router.navigateByUrl('/login');
 
   }
+  checkAdmin(){
+    if(sessionStorage.getItem('user')===null){
+    return false;
+  }else{
+    return sessionStorage.getItem('user')==='admin';
+
+  }
+  }
+  
+  
 }

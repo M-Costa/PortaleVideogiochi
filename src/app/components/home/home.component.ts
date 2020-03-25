@@ -12,5 +12,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  checkAdmin(){
+    if(sessionStorage.getItem('user')===null){
+    return false;
+  }else{
+    return sessionStorage.getItem('user')==='admin';
 
+  }
+}
 }
