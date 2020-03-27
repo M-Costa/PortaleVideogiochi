@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { LoginGuardServiceService } from './services/login-guard-service.service
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { MenuServiceService } from './services/menu-service.service';
 import { ModListGuardService } from './services/mod-list-guard.service';
+import { RegistraComponent } from './components/registra/registra.component';
 
 const appRoutes: Routes = [
   {path: 'portale',canActivateChild:[LoginGuardServiceService], children:[
@@ -27,8 +28,10 @@ const appRoutes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
   {path:'login', component:LoginComponent, canActivate:[LoginGuardServiceService] },
   {path:'menu', component:MenuComponent, canActivate:[MenuServiceService]},
-  {path:'**', component:ErrorPageComponent},
-  {path:'header',component:HeaderComponent}
+  {path:'header',component:HeaderComponent},
+  {path:'registra',component:RegistraComponent},
+  {path:'**', component:ErrorPageComponent}
+
 
 ];
 
@@ -43,11 +46,13 @@ const appRoutes: Routes = [
     MenuComponent,
     LoginComponent,
     HeaderComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    RegistraComponent
   ],
   imports: [
     BrowserModule, 
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
      

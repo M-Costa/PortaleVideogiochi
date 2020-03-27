@@ -1,9 +1,13 @@
-<div class="page">
+<div class="page wrapper">
+    <form #FormLogin="ngForm" (ngSubmit)="login()">
 <div class="wrapper">
-    <input class="box user-grid"#nome  type="text" placeholder="nome utente">
-    <input class="box pw-grid"#password (keyup.enter)="login(nome.value,password.value)" type="password" placeholder="Password">
-    <button class="box invio-grid" (click)="login(nome.value,password.value)">login</button>
+    
+    <input name="name" [(ngModel)]="username" class="box user-grid" type="text" placeholder="nome utente">
+    <input name="pw" [(ngModel)]="password" class="box pw-grid" (keyup.enter)="login()" type="password" placeholder="Password">
+    <button class="box invio-grid"type="submit"[disabled]="!FormLogin.valid">login</button>
+
 </div>
+</form>
 <div>
     <p >non ti sei ancora registrato?</p> <p id="reg" routerLink="/registra">registrati!</p>
 </div>

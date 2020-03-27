@@ -10,14 +10,15 @@ import { stringify } from 'querystring';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router) { }
- 
+ username:string;
+ password:string;
   ngOnInit(): void {
   }
 
-  login(nome:string,password:string) {
+  login() {
    
-    if (nome != null && password != null && nome!=="" && password!=="") {
-      sessionStorage.setItem('user',nome);
+    if (this.username != null && this.password != null && this.username!=="" && this.password!=="") {
+      sessionStorage.setItem('user',this.username);
       this.router.navigateByUrl('/portale/home');
     }
 
