@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -18,19 +18,21 @@ import { ModListGuardService } from './services/mod-list-guard.service';
 import { RegistraComponent } from './components/registra/registra.component';
 
 const appRoutes: Routes = [
-  {path: 'portale',canActivateChild:[LoginGuardServiceService], children:[
-  { path: 'home', component: HomeComponent },
-  { path: 'gameList',      component: ListaVideogiochiComponent },
-  { path: 'modificaLista',      component: ModificaListaComponent, canActivate:[ModListGuardService]} ,
-  { path: 'dettaglioVideogioco',      component: DettaglioVideogiocoComponent },
+  {
+    path: 'portale', canActivateChild: [LoginGuardServiceService], children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'gameList', component: ListaVideogiochiComponent },
+      { path: 'modificaLista', component: ModificaListaComponent, canActivate: [ModListGuardService] },
+      { path: 'dettaglioVideogioco', component: DettaglioVideogiocoComponent },
 
-  ]},
-  {path:'',redirectTo:'/login',pathMatch:'full'},
-  {path:'login', component:LoginComponent, canActivate:[LoginGuardServiceService] },
-  {path:'menu', component:MenuComponent, canActivate:[MenuServiceService]},
-  {path:'header',component:HeaderComponent},
-  {path:'registra',component:RegistraComponent},
-  {path:'**', component:ErrorPageComponent}
+    ]
+  },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent, canActivate: [LoginGuardServiceService] },
+  { path: 'menu', component: MenuComponent, canActivate: [MenuServiceService] },
+  { path: 'header', component: HeaderComponent },
+  { path: 'registra', component: RegistraComponent },
+  { path: '**', component: ErrorPageComponent }
 
 
 ];
@@ -50,12 +52,12 @@ const appRoutes: Routes = [
     RegistraComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
-     
+
     )
 
   ],

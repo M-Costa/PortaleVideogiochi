@@ -13,6 +13,7 @@
     font-size: 150%;
     float: left;
     text-align: center;
+    
    
     
   }
@@ -48,4 +49,7 @@ p{
 #reg:hover{
     color: rgba(255, 5, 5, 0.644);
     
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.616);
 }

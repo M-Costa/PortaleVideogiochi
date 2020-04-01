@@ -1,15 +1,16 @@
 <div class="page wrapper">
-    <form #FormLogin="ngForm" (ngSubmit)="login()">
-<div class="wrapper">
+    <form [formGroup]="utente" (ngSubmit)="login()">
+        <div class="wrapper">
+
+            <input name="name" formControlName="username" class="box user-grid" type="text" placeholder="nome utente">
+            <input name="pw" formControlName="password" class="box pw-grid" (keyup.enter)="login()" type="password"
+                placeholder="Password">
+            <button class="box invio-grid" type="submit">login</button>
+        </div>
+    </form>
+    <div>
+        <p>non ti sei ancora registrato?</p>
+        <p id="reg" routerLink="/registra">registrati!</p>
+    </div>
     
-    <input name="name" [(ngModel)]="username" class="box user-grid" type="text" placeholder="nome utente">
-    <input name="pw" [(ngModel)]="password" class="box pw-grid" (keyup.enter)="login()" type="password" placeholder="Password">
-    <button class="box invio-grid"type="submit"[disabled]="!FormLogin.valid">login</button>
-
-</div>
-</form>
-<div>
-    <p >non ti sei ancora registrato?</p> <p id="reg" routerLink="/registra">registrati!</p>
-</div>
-
 </div>
